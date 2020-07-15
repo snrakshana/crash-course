@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'cso0m5qoy8r-lowq@62!1qsr&h7f+3ltc9pi%^c^gbg_yrokr('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['rakshana-crm.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['rakshana-crm.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -128,7 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/images/'
